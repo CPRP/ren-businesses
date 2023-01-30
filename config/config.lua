@@ -1,6 +1,6 @@
 Config = {
     AlowCuts = true,--// if this is true this means that all businesses have to take a cut from a employee sale
-    PayoutSplit = 40,--// the cut procentage what the business takes what the rest is left for the employee
+    PayoutSplit = 40,--// the cut procentage what the business takes and the rest is left for the employee
     Debug = false,--//if true it will enable polyzone debug
     businesses = {
         --//Default preset business
@@ -208,7 +208,19 @@ Config = {
                             required = {
                                 ['frozennugget'] = 1--// [item spawn name] = item count
                             }
-                        }                
+                        }, 
+                        {
+                            label = 'tosti',--//this is the items label name
+                            requiredLabel = 'Phone: 1x, Water: 2x',--//this displays on the menu what items are required to make this item
+                            required = {--//required item list
+                                ['phone'] = 1,--// [item spawn name] = item count
+                                ['water_bottle'] = 2--// [item spawn name] = item count
+                            },
+                            result = {--//The items you get when you finish crafting
+                                ['phone'] = 1,--// [item spawn name] = item count
+                                ['water_bottle'] = 2--// [item spawn name] = item count
+                            }
+                        },              
                     }            
                 },
                 [3] = {-- PREP STATION
